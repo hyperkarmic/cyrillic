@@ -46,5 +46,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body{
-  color: red;
+  color:red;
+  font-size:200px;
+  margin:0;
+  height:100vh; /* use 100% of the height of the viewport */
+  display:grid;             
+  place-items: center;
 }
