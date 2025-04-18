@@ -1,47 +1,45 @@
 
-
 const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-let item = alphabet[Math.floor(Math.random()*alphabet.length)]
+//initial instnace
+let item = alphabet[Math.floor(Math.random() * alphabet.length)]
 
- const refreshItem = () =>{
- item = alphabet[Math.floor(Math.random()*alphabet.length)]
-   text.style.color = "black"
+
+let text = document.getElementById("character")
+
 
 text.innerHTML = item
 
 
- }
+const green = () => {
+  text.style.color = "green"
+  setTimeout(refreshItem, 2500);
+}
 
+const red = () => {
+  setTimeout(refreshItem, 2500);
+  text.style.color = "red"
 
-  console.log("bastards!!!!")
-const fu = () =>{
-  refreshItem()
+}
+
+const refreshItem = () => {
+  text.style.color = "black"
+  item = alphabet[Math.floor(Math.random() * alphabet.length)]
+  text.innerHTML = item
 
 }
 
 
 
-const itemmaker = () =>{}
-let text = document.getElementById("character")
-text.innerHTML = item
 document.addEventListener("keydown", (event) => {
 
-  if(item != event.key){
-      text.style.color = "red"
-
-    setTimeout(fu, 5000);
-    }
-  if(item == event.key){
-
-
- text.style.color = "green"
-
-    setTimeout(fu, 5000);
-    }
+  if (item != event.key) {
+    red()
+  }
+  if (item == event.key) {
+    green()
+  }
 })
 
 
-
-//text.style.color = "green";
 
 console.log(alphabet)
