@@ -7,8 +7,10 @@ const item = alphabet[Math.floor(Math.random()*alphabet.length)]
   console.log(alphabet)
 let text = document.getElementById("test")
 text.innerHTML = item
-console.log("scarey")
+document.addEventListener("keydown", (event) => {
+  console.log("boo")
+text.style.color = "red";
+});
 
-  console.log(test, "boo")
 
 console.log(alphabet)
