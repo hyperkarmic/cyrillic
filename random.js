@@ -12,12 +12,16 @@ text.innerHTML = item
 
 const green = () => {
   text.style.color = "green"
-  setTimeout(refreshItem, 2500);
+  let audioElement = new Audio("correct.wav")
+  audioElement.play()
+  setTimeout(refreshItem, 1250);
 }
 
 const red = () => {
-  setTimeout(refreshItem, 2500);
   text.style.color = "red"
+  let audioElement = new Audio("wrong.mp3")
+  audioElement.play()
+  setTimeout(refreshItem, 1250);
 
 }
 
